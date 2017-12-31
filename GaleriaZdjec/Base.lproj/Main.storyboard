@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GaleriaZdjec" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pa9-0b-oi3">
+                                <rect key="frame" x="10" y="25" width="355" height="637"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q7g-ec-GN8">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="komorka" id="TAE-wd-C1C" customClass="Komorka" customModule="GaleriaZdjec" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-yG-Q0E">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="RVn-yG-Q0E" secondAttribute="bottom" id="2f4-33-OHC"/>
+                                            <constraint firstItem="RVn-yG-Q0E" firstAttribute="top" secondItem="TAE-wd-C1C" secondAttribute="top" id="9Ay-00-UxK"/>
+                                            <constraint firstItem="RVn-yG-Q0E" firstAttribute="leading" secondItem="TAE-wd-C1C" secondAttribute="leading" id="Vj7-cx-Vzd"/>
+                                            <constraint firstAttribute="trailing" secondItem="RVn-yG-Q0E" secondAttribute="trailing" id="e3t-r1-uF2"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="RVn-yG-Q0E" id="fne-sQ-f4g"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pa9-0b-oi3" secondAttribute="trailing" constant="10" id="ZRz-mX-SLN"/>
+                            <constraint firstItem="Pa9-0b-oi3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="daC-Xa-clU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pa9-0b-oi3" secondAttribute="bottom" constant="5" id="e6x-k1-SYa"/>
+                            <constraint firstItem="Pa9-0b-oi3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="pHv-lN-tt3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Pa9-0b-oi3" id="1bs-Wa-0sO"/>
+                        <segue destination="9iB-2a-WEa" kind="show" identifier="drugiViewController" id="A8y-XR-oDj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="133"/>
+        </scene>
+        <!--Drugi View Controller-->
+        <scene sceneID="xLG-NB-ysr">
+            <objects>
+                <viewController id="9iB-2a-WEa" customClass="DrugiViewController" customModule="GaleriaZdjec" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0SQ-Kb-LDc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4If-eA-2g8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3C-p6-40t">
+                                <rect key="frame" x="163" y="597" width="48" height="30"/>
+                                <state key="normal" title="Powrót"/>
+                                <connections>
+                                    <action selector="guzikWcisniety:" destination="9iB-2a-WEa" eventType="touchUpInside" id="GsN-Uk-TBN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4If-eA-2g8" firstAttribute="trailing" secondItem="Lov-NF-2OF" secondAttribute="trailing" id="FLv-Ab-IQD"/>
+                            <constraint firstItem="Lov-NF-2OF" firstAttribute="bottom" secondItem="t3C-p6-40t" secondAttribute="bottom" constant="40" id="Ing-Cp-PX3"/>
+                            <constraint firstItem="4If-eA-2g8" firstAttribute="top" secondItem="0SQ-Kb-LDc" secondAttribute="top" id="VNE-13-avv"/>
+                            <constraint firstItem="4If-eA-2g8" firstAttribute="bottom" secondItem="Lov-NF-2OF" secondAttribute="bottom" id="WV4-QN-aut"/>
+                            <constraint firstItem="t3C-p6-40t" firstAttribute="centerX" secondItem="0SQ-Kb-LDc" secondAttribute="centerX" id="nqo-y8-v4P"/>
+                            <constraint firstItem="4If-eA-2g8" firstAttribute="leading" secondItem="Lov-NF-2OF" secondAttribute="leading" id="r5u-wS-Qen"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lov-NF-2OF"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="4If-eA-2g8" id="sJP-Bp-X06"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSV-73-BEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893.60000000000002" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
